@@ -27,33 +27,27 @@
 	  gui = createGui();
 
 	  // Create Toggle
-	  t = createToggle("Toggle", 100, 50, 200, 50);
+	  t = createToggle("Music", 100, 50, 200, 50);
 	}
 
 	function draw() {
-	  background(220);
+	  background(0);
 	  drawGui();
 
 	  if (t.isPressed) {
 	    // Print a message when Toggle is pressed
 	    // that displays its value.
 	    print(t.label + " is " + t.val);
-  		var music = new Audio("NIVIRO - Flares.wav");
-  		music.play();
+			var music = new Audio("NIVIRO - Flares.wav");
+			music.play();
+  		//music.pause();
   		}
 	  }
-
-	  if (t.val) {
-	    // Draw an ellipse when Toggle is true.
-	    fill(255, 0, 0);
-	    ellipse(200, 300, 100);
-		}
 
 	/// Add these lines below sketch to prevent scrolling on mobile
 	function touchMoved() {
 	  // do some stuff
 	  return false;
-		music.pause();
 	}
  </script>
 </head>
