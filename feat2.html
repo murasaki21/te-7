@@ -18,9 +18,10 @@
 
 	<script>
 	let gui;
-
+	var music = new Audio("NIVIRO - Flares.wav");
 	// Create a variable for your Toggle
 	let t;
+
 
 	function setup() {
 	  createCanvas(400, 400);
@@ -38,7 +39,7 @@
 	    // Print a message when Toggle is pressed
 	    // that displays its value.
 	    print(t.label + " is " + t.val);
-			var music = new Audio("NIVIRO - Flares.wav");
+
 			music.play();
   		//music.pause();
   		}
