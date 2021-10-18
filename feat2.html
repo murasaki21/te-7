@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <script language="javascript" src="../lib/p5.touchgui.js"></script>
+	<script language="javascript" src="../lib/p5.js"></script>
+  <script language="javascript" src="p5.touchgui-master/p5.touchgui-master/lib/p5.touchgui.js"></script>
 	<title>Feature 2</title>
 
   <style>
@@ -37,14 +38,16 @@
 	    // Print a message when Toggle is pressed
 	    // that displays its value.
 	    print(t.label + " is " + t.val);
+  		var music = new Audio("NIVIRO - Flares.wav");
+  		music.play();
+  		}
 	  }
 
 	  if (t.val) {
 	    // Draw an ellipse when Toggle is true.
 	    fill(255, 0, 0);
 	    ellipse(200, 300, 100);
-	  }
-	}
+		}
 
 	/// Add these lines below sketch to prevent scrolling on mobile
 	function touchMoved() {
