@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+  <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
 	<title>Feature 1</title>
 
-	<link href="../_assets/css/shared.css" rel="stylesheet" type="text/css"/>
-	<link href="../_assets/css/examples.css" rel="stylesheet" type="text/css"/>
-	<script src="../_assets/js/examples.js"></script>
-
-	<script src="../lib/easeljs-NEXT.js"></script>
-	<!-- We also provide hosted minified versions of all CreateJS libraries.
+	 <!--We also provide hosted minified versions of all CreateJS libraries.
 	  http://code.createjs.com -->
+
     <style>
       body {
         /*dark blue*/
@@ -20,6 +17,7 @@
         padding: 50px;
       }
     </style>
+
 <script id="editable">
 	var canvas, stage;
 	var drawingCanvas;
@@ -34,7 +32,7 @@
 	function init() {
 		canvas = document.getElementById("myCanvas");
 		index = 0;
-		colors = ["#FFD6FF", "#DDADFF", "#A385FF", "#00118F", "#99B9FF"];
+		colors = ["#f848fe", "#ab12e2", "#4b08af", "#373fc4", "#4b8cfb"];
 
 		//check to see if we are running in a browser with touch support
 		stage = new createjs.Stage(canvas);
@@ -49,7 +47,7 @@
 		stage.addEventListener("stagemousedown", handleMouseDown);
 		stage.addEventListener("stagemouseup", handleMouseUp);
 
-		title = new createjs.Text("Click and Drag to draw", "36px Arial", "#777777");
+		title = new createjs.Text("begin drawing", "36px Arial", "#FFFFFF");
 		title.x = 300;
 		title.y = 200;
 		stage.addChild(title);
@@ -99,10 +97,9 @@
 <header class="EaselJS">
 	<h1>CurveTo</h1>
 
-	<p>This example demonstrates painting to the canvas using the
-		<code>Graphics</code> vector drawing API in EaselJS</p>
+	<p>Using EaselJS from CreateJS, I can create brushes that can change color and thickness via mouseclick and mousedrag</p>
 </header>
 
-<canvas id="myCanvas" width="960" height="400"></canvas>
+<canvas id="myCanvas" width="1400" height="550"></canvas>
 </body>
 </html>
